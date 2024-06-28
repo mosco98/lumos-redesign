@@ -109,8 +109,8 @@ const Hero = () => {
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block"
-                  initial={{ y: 60 }}
-                  animate={{ y: [50, -15, 0] }}
+                  initial={{ y: 80 }}
+                  animate={{ y: [80, -15, 0] }}
                   transition={{ duration: 1, delay: staggerHeroTexts(0, 3) }}
                 >
                   Experience the power of
@@ -120,8 +120,8 @@ const Hero = () => {
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block"
-                  initial={{ y: 60 }}
-                  animate={{ y: [60, -15, 0] }}
+                  initial={{ y: 80 }}
+                  animate={{ y: [80, -15, 0] }}
                   transition={{ duration: 1, delay: staggerHeroTexts(1, 3) }}
                 >
                   seamless collaboration with our
@@ -131,8 +131,8 @@ const Hero = () => {
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block text-[#98A2B3]"
-                  initial={{ y: 60 }}
-                  animate={{ y: [60, -15, 0] }}
+                  initial={{ y: 80 }}
+                  animate={{ y: [80, -15, 0] }}
                   transition={{ duration: 1, delay: staggerHeroTexts(2, 3) }}
                 >
                   game-changing features
