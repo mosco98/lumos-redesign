@@ -29,16 +29,13 @@ const Hero = () => {
   const staggerHeroTexts = stagger(0.1, { startDelay: 0.5 });
 
   return (
-    <section
-      ref={containerRef}
-      className="mt-[60px] relative overflow-hidden pb-20"
-    >
+    <section ref={containerRef} className="mt-[60px] relative overflow-hidden">
       <motion.img
         src={"/incoming-calls.svg"}
         width={950.538}
         height={97.625}
         alt="incoming-calls"
-        className="mx-auto scale-90"
+        className="mx-auto scale-90 hidden md:block"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
@@ -50,7 +47,7 @@ const Hero = () => {
         width={359.86606}
         height={142.13631}
         alt="content"
-        className="absolute -left-16 top-24 2xl:scale-100 md:scale-90"
+        className="absolute -left-16 top-24 2xl:scale-100 md:scale-90 hidden md:block"
         initial={{ x: -120 }}
         animate={{ x: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -63,7 +60,7 @@ const Hero = () => {
         width={273.2562}
         height={373.56989}
         alt="share-upload-files"
-        className="absolute -rotate-[2.421deg] top-72 -left-6 2xl:scale-100 md:scale-90"
+        className="absolute -rotate-[2.421deg] top-72 -left-6 2xl:scale-100 md:scale-90 hidden md:block"
         initial={{ x: -120 }}
         animate={{
           x: 0,
@@ -76,10 +73,10 @@ const Hero = () => {
         style={{ x: x2 }}
       />
 
-      <div className="pt-[100px] pb-[115px]">
-        <div className="w-[647px] mx-auto text-center">
+      <div className="pt-16 md:pt-[100px] pb-16 md:pb-[115px] px-4 md:px-0">
+        <div className="max-w-[647px] w-full mx-auto text-center">
           <motion.div
-            className="text-[#475467] flex items-center justify-center gap-3"
+            className="text-[#475467] flex flex-col md:flex-row items-center justify-center gap-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.9 }}
@@ -99,7 +96,7 @@ const Hero = () => {
           </motion.div>
 
           <div className="mt-5">
-            <motion.h1 className="text-[46px] leading-[52px] font-bold tracking-tighter">
+            <motion.h1 className="text-[36px] md:text-[46px] leading-[44px] md:leading-[52px] font-bold tracking-tighter">
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block"
@@ -150,14 +147,14 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="h-11 bg-black text-white px-[18px] py-[10px] rounded-lg hover:opacity-85 transition-all duration-300 ease-in-out font-medium"
+            className="h-11 bg-black text-white px-[18px] py-[10px] rounded-lg hover:opacity-85 transition-all duration-300 ease-in-out font-medium inline-flex items-center justify-center"
           >
             Discover how it works
           </motion.button>
         </div>
       </div>
 
-      <motion.div className="relative">
+      <motion.div className="relative hidden md:block">
         <motion.img
           src={"/hero-image.svg"}
           width={1062}
@@ -168,7 +165,17 @@ const Hero = () => {
         />
       </motion.div>
 
-      <div className="2xl:scale-100 md:scale-[0.8] absolute -right-20 2xl:bottom-96 md:bottom-[370px]">
+      <div className="relative block md:hidden">
+        <Image
+          src={"/hero-image.svg"}
+          width={1062}
+          height={331}
+          alt="hero-image"
+          className="mx-auto z-20 relative"
+        />
+      </div>
+
+      <div className="2xl:scale-100 md:scale-[0.8] absolute -right-20 2xl:bottom-96 md:bottom-[370px] hidden md:block">
         <motion.img
           src={"/messages.svg"}
           width={333}
@@ -187,7 +194,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="2xl:scale-100 md:scale-90 absolute -right-32 2xl:bottom-20 md:bottom-48">
+      <div className="2xl:scale-100 md:scale-90 absolute -right-32 2xl:bottom-20 md:bottom-48 hidden md:block">
         <motion.img
           src={"/following-update.svg"}
           width={309.8092}
