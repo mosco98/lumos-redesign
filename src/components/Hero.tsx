@@ -105,7 +105,7 @@ const Hero = () => {
           </motion.div>
 
           <div className="mt-5">
-            <motion.h1 className="text-[32px] md:text-[46px] leading-[40px] md:leading-[52px] font-bold tracking-tighter">
+            <motion.h1 className="text-[32px] md:text-[46px] leading-[40px] md:leading-[52px] font-bold tracking-tighter hidden md:block">
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block"
@@ -139,6 +139,16 @@ const Hero = () => {
                 </motion.span>
               </motion.span>
             </motion.h1>
+
+            <h1 className="text-[32px] md:text-[46px] leading-[40px] md:leading-[52px] font-bold tracking-tighter block md:hidden">
+              <span className="block">Experience the power of</span>
+
+              <span className="block">seamless collaboration with our</span>
+
+              <span className="block text-[#98A2B3]">
+                game-changing features
+              </span>
+            </h1>
           </div>
 
           <motion.p
