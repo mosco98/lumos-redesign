@@ -91,15 +91,20 @@ const Hero = () => {
               priority
             />
 
-            <p>Trusted by over 10,000 leading creators and teams worldwide</p>
+            <p className="text-[15px]">
+              Trusted by over 10,000 leading creators and teams worldwide
+            </p>
           </motion.div>
 
           <div className="mt-5">
-            <h1 className="text-[42px] leading-[52px] font-semibold">
+            <motion.h1
+              className="text-[46px] leading-[52px] font-bold tracking-tighter"
+              transition={{ staggerChildren: 0.4 }}
+            >
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block"
-                  initial={{ y: 43 }}
+                  initial={{ y: 50 }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1 }}
                 >
@@ -110,7 +115,7 @@ const Hero = () => {
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block"
-                  initial={{ y: 43 }}
+                  initial={{ y: 50 }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1 }}
                 >
@@ -121,18 +126,18 @@ const Hero = () => {
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block text-[#98A2B3]"
-                  initial={{ y: 43 }}
+                  initial={{ y: 50 }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1 }}
                 >
                   game-changing features
                 </motion.span>
               </motion.span>
-            </h1>
+            </motion.h1>
           </div>
 
           <motion.p
-            className="my-5"
+            className="my-5 text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.7 }}
@@ -146,7 +151,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="h-11 bg-black text-white px-[18px] py-[10px] rounded-lg hover:opacity-85 transition-all duration-300 ease-in-out font-medium text-[15px]"
+            className="h-11 bg-black text-white px-[18px] py-[10px] rounded-lg hover:opacity-85 transition-all duration-300 ease-in-out font-medium"
           >
             Discover how it works
           </motion.button>
