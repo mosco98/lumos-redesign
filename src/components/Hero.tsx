@@ -140,7 +140,7 @@ const Hero = () => {
               </motion.span>
             </motion.h1>
 
-            <h1 className="text-[32px] md:text-[46px] leading-[40px] md:leading-[52px] font-bold tracking-tighter block md:hidden">
+            <h1 className="text-[32px] md:text-[46px] leading-[40px] md:leading-[52px] font-bold tracking-tighter block md:hidden font-inter">
               <span className="block">Experience the power of</span>
 
               <span className="block">seamless collaboration with our</span>
