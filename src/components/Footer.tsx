@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="flex items-center justify-center pt-8 pb-6 px-4 text-center">
       <p className="text-black/80 text-sm">
-        Designed with love{""}
+        Redesigned with love{""}
         <motion.svg
           id="emoji"
           viewBox="0 0 72 72"
@@ -42,7 +42,7 @@ const Footer = () => {
         {""}
         by{" "}
         <a
-          href=""
+          href="https://x.com/estherinontah_"
           target="_blank"
           className="underline underline-offset-1 font-medium"
         >
@@ -50,7 +50,7 @@ const Footer = () => {
         </a>{" "}
         and developed by{" "}
         <a
-          href="https://www.linkedin.com/in/moses-enyinnaya-142282197/"
+          href="https://x.com/meandchimso"
           target="_blank"
           className="underline underline-offset-1 font-medium"
         >
