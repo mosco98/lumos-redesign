@@ -14,6 +14,10 @@ const config: Config = {
         screens: {
           "2xl": "1400px"
         }
+      },
+
+      fontFamily: {
+        inter: ["var(--font-inter)"]
       }
     }
   },

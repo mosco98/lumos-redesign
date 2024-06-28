@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import { motion } from "framer-motion";
@@ -29,6 +30,8 @@ const HomePage = () => {
       <Navbar />
 
       <Hero />
+
+      <Footer />
     </motion.div>
   );
 };

@@ -13,7 +13,7 @@ const Navbar = () => {
           <div className="flex items-center gap-[82px]">
             <h1 className="text-2xl font-bold">Lumos</h1>
 
-            <div className="items-center gap-8 text-[#475467] text-[15px] hidden md:flex">
+            <div className="items-center gap-8 text-[#475467] text-[15px] hidden md:flex font-medium">
               <button className="hover:opacity-80 transition-all duration-300 ease-in-out">
                 Features
               </button>
