@@ -86,8 +86,17 @@ const Hero = () => {
               width={152}
               height={32}
               alt="avatar-group"
-              // className="mx-auto"
               priority
+              className="hidden md:block"
+            />
+
+            <Image
+              src={"/avatar-group.png"}
+              width={152}
+              height={32}
+              alt="avatar-group"
+              priority
+              className="block md:hidden"
             />
 
             <p className="text-[15px]">
@@ -96,12 +105,12 @@ const Hero = () => {
           </motion.div>
 
           <div className="mt-5">
-            <motion.h1 className="text-[36px] md:text-[46px] leading-[44px] md:leading-[52px] font-bold tracking-tighter">
+            <motion.h1 className="text-[32px] md:text-[46px] leading-[40px] md:leading-[52px] font-bold tracking-tighter">
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block"
-                  initial={{ y: 50 }}
-                  animate={{ y: [50, -10, 0] }}
+                  initial={{ y: 60 }}
+                  animate={{ y: [50, -15, 0] }}
                   transition={{ duration: 1, delay: staggerHeroTexts(0, 3) }}
                 >
                   Experience the power of
@@ -111,8 +120,8 @@ const Hero = () => {
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block"
-                  initial={{ y: 50 }}
-                  animate={{ y: [50, -10, 0] }}
+                  initial={{ y: 60 }}
+                  animate={{ y: [60, -15, 0] }}
                   transition={{ duration: 1, delay: staggerHeroTexts(1, 3) }}
                 >
                   seamless collaboration with our
@@ -122,8 +131,8 @@ const Hero = () => {
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block text-[#98A2B3]"
-                  initial={{ y: 50 }}
-                  animate={{ y: [50, -10, 0] }}
+                  initial={{ y: 60 }}
+                  animate={{ y: [60, -15, 0] }}
                   transition={{ duration: 1, delay: staggerHeroTexts(2, 3) }}
                 >
                   game-changing features
@@ -143,14 +152,16 @@ const Hero = () => {
             from concepts to completion.
           </motion.p>
 
-          <motion.button
+          <motion.div
+            className="flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="h-11 bg-black text-white px-[18px] py-[10px] rounded-lg hover:opacity-85 transition-all duration-300 ease-in-out font-medium inline-flex items-center justify-center"
           >
-            Discover how it works
-          </motion.button>
+            <motion.button className="h-12 bg-black text-white px-6 py-4 rounded-lg hover:opacity-85 transition-all duration-300 ease-in-out font-medium inline-flex items-center justify-center">
+              Discover how it works
+            </motion.button>
+          </motion.div>
         </div>
       </div>
 

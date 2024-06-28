@@ -36,7 +36,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           </div>
 
           <div className="flex-1 overflow-y-auto py-6">
-            <ul className="text-xl space-y-10">
+            <ul className="text-lg space-y-8">
               <li>
                 <button className="hover:opacity-80 transition-all duration-300 ease-in-out">
                   Features
@@ -62,7 +62,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               </li>
 
               <li>
-                <button className="h-12 bg-black text-white px-[18px] py-[10px] rounded-lg hover:opacity-85 transition-all duration-300 ease-in-out font-medium text-lg inline-flex items-center justify-center">
+                <button className="h-12 bg-black text-white px-6 py-[10px] rounded-lg hover:opacity-85 transition-all duration-300 ease-in-out font-medium text-base inline-flex items-center justify-center">
                   Get started for free
                 </button>
               </li>
