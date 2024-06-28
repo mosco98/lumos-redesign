@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, stagger, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -25,6 +25,8 @@ const Hero = () => {
   const x4 = useTransform(scrollYProgress, [0.9, 1], [0, 120]);
 
   const scale = useTransform(bottomImageScrollY, [0, 1], [0.95, 1]);
+
+  const staggerHeroTexts = stagger(0.1, { startDelay: 0.5 });
 
   return (
     <section
@@ -97,16 +99,13 @@ const Hero = () => {
           </motion.div>
 
           <div className="mt-5">
-            <motion.h1
-              className="text-[46px] leading-[52px] font-bold tracking-tighter"
-              transition={{ staggerChildren: 0.4 }}
-            >
+            <motion.h1 className="text-[46px] leading-[52px] font-bold tracking-tighter">
               <motion.span className="overflow-hidden block">
                 <motion.span
                   className="block"
                   initial={{ y: 50 }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 1 }}
+                  animate={{ y: [50, -10, 0] }}
+                  transition={{ duration: 1, delay: staggerHeroTexts(0, 3) }}
                 >
                   Experience the power of
                 </motion.span>
@@ -116,8 +115,8 @@ const Hero = () => {
                 <motion.span
                   className="block"
                   initial={{ y: 50 }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 1 }}
+                  animate={{ y: [50, -10, 0] }}
+                  transition={{ duration: 1, delay: staggerHeroTexts(1, 3) }}
                 >
                   seamless collaboration with our
                 </motion.span>
@@ -127,8 +126,8 @@ const Hero = () => {
                 <motion.span
                   className="block text-[#98A2B3]"
                   initial={{ y: 50 }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 1 }}
+                  animate={{ y: [50, -10, 0] }}
+                  transition={{ duration: 1, delay: staggerHeroTexts(2, 3) }}
                 >
                   game-changing features
                 </motion.span>
