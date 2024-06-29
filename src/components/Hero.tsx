@@ -97,41 +97,41 @@ const Hero = () => {
           </motion.div>
 
           <div className="mt-5">
-            <motion.h1 className="text-[32px] md:text-[46px] leading-[40px] md:leading-[52px] font-semibold tracking-[-2.25px] hidden md:block font-inter">
-              <motion.span className="overflow-hidden block">
+            <motion.h1 className="text-[32px] md:text-[46px] leading-none font-semibold tracking-[-2.25px] hidden md:block font-inter">
+              <motion.span className="overflow-hidden block py-1">
                 <motion.span
                   className="block"
                   initial={{ y: 80 }}
-                  animate={{ y: [80, -15, 0] }}
+                  animate={{ y: [80, -10, 0] }}
                   transition={{ duration: 1, delay: staggerHeroTexts(0, 3) }}
                 >
                   Experience the power of
                 </motion.span>
               </motion.span>
 
-              <motion.span className="overflow-hidden block">
+              <motion.span className="overflow-hidden block py-1">
                 <motion.span
                   className="block"
                   initial={{ y: 80 }}
-                  animate={{ y: [80, -15, 0] }}
+                  animate={{ y: [80, -10, 0] }}
                   transition={{ duration: 1, delay: staggerHeroTexts(1, 3) }}
                 >
                   seamless collaboration with our
                 </motion.span>
               </motion.span>
 
-              <motion.span className="overflow-hidden block relative">
+              <motion.span className="overflow-hidden block relative py-1">
                 <motion.span
                   className="block text-[#98A2B3]"
                   initial={{ y: 80 }}
-                  animate={{ y: [80, -15, 0] }}
+                  animate={{ y: [80, -10, 0] }}
                   transition={{ duration: 1, delay: staggerHeroTexts(2, 3) }}
                 >
                   game-changing features
                 </motion.span>
 
                 <div
-                  className="w-full h-5 absolute -bottom-2"
+                  className="w-full h-5 absolute -bottom-px"
                   style={{
                     background:
                       "linear-gradient(180deg, rgba(253, 253, 255, 0.00) 0%, #FFFFFF 81.62%)"
@@ -183,6 +183,9 @@ const Hero = () => {
           alt="hero-image"
           className="mx-auto z-20 relative"
           style={{ scale, y: yHeroImage }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
         />
       </motion.div>
 
